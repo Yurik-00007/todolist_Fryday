@@ -1,10 +1,10 @@
-import {authAPI} from "api/todolists-api";
 import {Dispatch} from "redux";
-import {handleServerAppError, handleServerNetworkError} from "utils/error-utils";
-import {LoginDataType} from "features/auth/Login";
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {appActions} from "app/app.reducer";
+import {handleServerAppError} from "common/utils";
+import { handleServerNetworkError} from "common/utils/handle-server-network-error";
 import {clearTasksAndTodolists} from "common/actions/common.actions";
+import {authAPI, LoginDataType} from "features/auth/auth.api";
 
 
 

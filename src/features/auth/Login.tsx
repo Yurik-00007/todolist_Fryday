@@ -8,23 +8,18 @@ import FormLabel from '@mui/material/FormLabel';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import {useFormik} from "formik";
-import {authReducer, loginTC} from "features/auth/auth.reducer";
-import {useAppDispatch, useAppSelector} from "app/store";
+import {loginTC} from "features/auth/auth.reducer";
+import {useAppSelector} from "app/store";
 import {Navigate} from "react-router-dom";
 import {selectIsLoggedIn} from "features/auth/auth.selectors";
+import {LoginDataType} from "features/auth/auth.api";
+import {useAppDispatch} from "common/hooks";
 
 
 type FormikErrorType = {
     email?: string
     password?: string
     rememberMe?: boolean
-}
-
-export type LoginDataType ={
-    email:string
-    password:string
-    rememberMe?: boolean
-    captcha?:string
 }
 
 const validate=(values:LoginDataType) => {

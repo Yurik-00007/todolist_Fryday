@@ -1,9 +1,10 @@
 import React from 'react';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert, {AlertProps} from '@mui/material/Alert';
-import {useAppDispatch, useAppSelector} from 'app/store';
+import {useAppSelector} from 'app/store';
 import {appActions} from "app/app.reducer";
 import {selectError} from "app/app.selectors";
+import {useAppDispatch} from "common/hooks";
 
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
     props, ref) {
